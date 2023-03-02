@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/coches', function () {
+
+    $cars = DB::table("test_laravel")->get();
+
+    dd($cars);
+
+});
